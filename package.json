@@ -4,8 +4,11 @@
   "description": "A full-stack shopping list application developed to learn MERN stack development and deployment.",
   "main": "server.js",
   "scripts": {
+    "client-install": "yarn --cwd ./client install",
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "server": "nodemon server.js",
+    "client": "cd client && yarn start",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "repository": "git@github.com:dvnnorth/shopping-list.git",
   "author": "dvnnorth <13654540+dvnnorth@users.noreply.github.com>",
